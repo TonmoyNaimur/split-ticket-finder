@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body { font-family: Arial, sans-serif; width: 340px; padding: 12px; font-size: 13px; }
+    input { width: 100%; box-sizing: border-box; padding: 6px; margin: 6px 0; }
+    button { cursor: pointer; padding: 6px 12px; }
+    #msg { margin-top: 8px; color: #070; }
+  </style>
+</head>
+<body>
+  <b>Train Split Finder</b>
+  <p>Paste your Gemini API key (optional). It is stored only inside this extension.</p>
+  <input id="key" type="password" placeholder="Gemini API key" />
+  <button id="save">Save key</button> <button id="clear">Remove key</button>
+  <div id="msg"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

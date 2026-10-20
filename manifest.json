@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Train Split Finder",
+  "version": "0.3",
+  "description": "Finds split-ticket combinations on Bangladesh Railway",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://eticket.railway.gov.bd/*",
+    "https://railspaapi.shohoz.com/*",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html" },
+  "content_scripts": [
+    {
+      "matches": ["https://eticket.railway.gov.bd/*"],
+      "js": ["scanner.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://eticket.railway.gov.bd/*"],
+      "js": ["bridge.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
